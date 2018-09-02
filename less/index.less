@@ -1,0 +1,206 @@
+//引入变量的less文件
+@import 'variables.less';
+//引入函数的less文件
+@import 'maxin.less';
+//头部区域
+#header {
+    .row {
+        >div {
+            border-right: 1px solid @border-color;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            &:nth-child(4) {
+                border-right: none;
+            }
+            a {
+                color: @a-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// 导航区域
+#nav {
+    background-color: white;
+    margin-bottom: 0; //导航头部样式
+    .navbar-header {
+        .navbar-toggle {
+            margin-top: 25px;
+        }
+        .navbar-brand {
+            height: 80px;
+            line-height: 50px;
+            >i {
+                font-size: 30px;
+                &.icon-icon {
+                    color: @main-color;
+                }
+                &.icon-logo {
+                    color: black;
+                }
+            }
+        }
+    } //导航ul部分
+    .navbar-nav {
+        >li {
+            >a {
+                height: 80px;
+                line-height: 50px;
+                &:hover {
+                    border-bottom: 2px solid @main-color;
+                }
+            }
+            &.active {
+                >a {
+                    background-color: white;
+                    border-bottom: 2px solid @main-color;
+                }
+            }
+        }
+    }
+}
+
+//轮播区域
+#slide {
+    .datu {
+        height: 410px;
+        display: block;
+        background-position: center center;
+    }
+    .xiaotu {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//网站特色专题区域
+#featrue {
+    padding: 40px 0;
+    .row {
+        >div {
+            margin-bottom: 10px;
+            .media {
+                >a {
+                    color: @a-color;
+                    text-decoration: none;
+                    &:hover {
+                        color: @main-color;
+                    }
+                }
+                @media(max-width: 768px) {
+                    >a {
+                        width: 220px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//立即预约区
+#booking {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+
+// 产品推荐区域
+#products {
+    background-color: #f0f0f0;
+    padding-top: 40px;
+    .ul-wapper {
+        width: 100%;
+        overflow: hidden;
+        .nav-tabs {
+            width: 750px;
+            >li {
+                >a {
+                    color: #333;
+                    font-size: 16px;
+                    border: 0;
+                    background-color: #f0f0f0;
+                }
+                &.active {
+                    >a {
+                        border-bottom: 2px solid #e92322;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content {
+        .productBox {
+            display: flex;
+            position: relative;
+            margin-top: 20px;
+            background-color: #ffffff;
+            &.active {
+                background-color: @main-color;
+                color: #fff;
+            }
+            >.product-left {
+                height: 160px;
+                flex: 1; // margin-right: 120px;
+                padding: 10px;
+                >h4 {
+                    text-align: center;
+                }
+                >.row {
+                    >div {
+                        margin-top: 10px; //    text-align: left;
+                        >p {
+                            margin-bottom: 0;
+                        }
+                        &:nth-child(2n) {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            >.product-right {
+                position: relative;
+                width: 120px;
+                height: 160px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-left: 1px dashed #ccc;
+                >p {
+                    margin-bottom: 0;
+                    >strong {
+                        font-size: 30px;
+                    }
+                }
+                &::before,
+                &::after {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: #f0f0f0;
+                    position: absolute;
+                    left: -8px;
+                }
+                &::before {
+                    top: -6px;
+                }
+                &::after {
+                    bottom: -8px;
+                }
+                >.tooltips {}
+            }
+        }
+    }
+}
+
+//全部新闻区域
+#news {
+    height: 200px;
+}
